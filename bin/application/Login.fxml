@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="300.0" spacing="10.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Login">
+   <children>
+      <HBox alignment="CENTER" prefHeight="95.0" prefWidth="300.0" spacing="10.0">
+         <children>
+            <Label text="Bank Login">
+               <font>
+                  <Font size="51.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="0.0" prefWidth="300.0" spacing="10.0">
+         <children>
+            <Label fx:id="incorrectLabel" opacity="0.0" text="Incorrect username/password!" textFill="RED">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutX="10.0" layoutY="70.0" prefHeight="50.0" prefWidth="300.0" spacing="10.0">
+         <children>
+            <TextField fx:id="usernameTextField" onKeyReleased="#processUsername" promptText="Username" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutX="10.0" layoutY="130.0" prefHeight="50.0" prefWidth="300.0" spacing="10.0">
+         <children>
+            <PasswordField fx:id="passwordTextField" onKeyReleased="#processPassword" promptText="Password" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutX="10.0" layoutY="190.0" prefHeight="50.0" prefWidth="300.0" spacing="10.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#processLogin" prefWidth="110.0" text="Login">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="0.0" prefWidth="300.0" spacing="10.0">
+         <children>
+            <Label onMouseClicked="#processCreateAccount" text="Create account?" underline="true">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+         </children>
+      </HBox>
+   </children>
+</VBox>

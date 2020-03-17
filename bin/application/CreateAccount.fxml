@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="300.0" spacing="10.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.CreateAccount">
+   <children>
+      <HBox alignment="CENTER" prefHeight="95.0" prefWidth="300.0" spacing="10.0">
+         <children>
+            <Label text="Create Account">
+               <font>
+                  <Font size="42.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="0.0" prefWidth="300.0" spacing="10.0">
+         <children>
+            <Label fx:id="incorrectLabel" opacity="0.0" text="Incorrect username/password!" textFill="RED">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutX="10.0" layoutY="70.0" prefHeight="50.0" prefWidth="300.0" spacing="10.0">
+         <children>
+            <Label text="Enter Username:" translateX="-10.0" />
+            <TextField fx:id="usernameTextField" onKeyReleased="#processUsername" promptText="Username" translateX="20.0" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutX="10.0" layoutY="130.0" prefHeight="50.0" prefWidth="300.0" spacing="10.0">
+         <children>
+            <Label text="Enter Password:" translateX="-12.0" />
+            <PasswordField fx:id="passwordTextField" onKeyReleased="#processPassword" promptText="Password" translateX="21.0" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="50.0" prefWidth="300.0" spacing="10.0">
+         <children>
+            <Label text="Enter Email:" translateX="-21.0" />
+            <TextField fx:id="emailTextField" onKeyReleased="#processEmail" promptText="Email" translateX="31.0" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="50.0" prefWidth="300.0" spacing="10.0">
+         <children>
+            <Label text="Enter First Name:" translateX="-8.0" />
+            <TextField fx:id="firstNameTextField" onKeyReleased="#processFirstName" promptText="First Name" translateX="18.0" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="50.0" prefWidth="300.0" spacing="10.0">
+         <children>
+            <Label text="Enter Last Name:" translateX="-9.0" />
+            <TextField fx:id="lastNameTextField" onKeyReleased="#processLastName" promptText="Last Name" translateX="18.0" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutX="10.0" layoutY="190.0" prefHeight="50.0" prefWidth="300.0" spacing="10.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#processCreateAccount" prefWidth="110.0" text="Create Account">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="0.0" prefWidth="300.0" spacing="10.0">
+         <children>
+            <Label onMouseClicked="#processBack" text="Login" underline="true">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+         </children>
+      </HBox>
+   </children>
+</VBox>

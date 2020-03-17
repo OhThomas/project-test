@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="300.0" spacing="10.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.UserAccount">
+   <children>
+      <HBox alignment="CENTER" prefHeight="95.0" prefWidth="300.0" spacing="10.0">
+         <children>
+            <Label fx:id="nameLabel" onMouseClicked="#changeName" text="Name">
+               <font>
+                  <Font size="51.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="0.0" prefWidth="300.0" spacing="10.0" />
+      <HBox alignment="CENTER" layoutX="10.0" layoutY="70.0" prefHeight="50.0" prefWidth="300.0" spacing="10.0" />
+      <HBox alignment="CENTER" layoutX="10.0" layoutY="130.0" prefHeight="50.0" prefWidth="300.0" spacing="10.0" />
+      <HBox alignment="CENTER" layoutX="10.0" layoutY="190.0" prefHeight="50.0" prefWidth="300.0" spacing="10.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#logout" prefWidth="110.0" text="Logout">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</VBox>

@@ -1,6 +1,5 @@
-/*hi again hi again hi again*/
-
 package application;
+
 import java.net.URL;
 import java.util.ResourceBundle;
 

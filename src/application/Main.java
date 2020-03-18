@@ -1,9 +1,3 @@
-/**
- * 
- * hI THERE FG
- */
-
-
 package application;
 	
 import javafx.application.Application;

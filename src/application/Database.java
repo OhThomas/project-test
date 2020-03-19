@@ -9,7 +9,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
 /**
- * Goes through the database.properties file to read/write data (create server to store this information to 1 database instead of locally)
+ * Goes through the database.properties file to read/write data. (create server to store this information to 1 database instead of locally)
  * 
  * @author Thomas Rader (vil203)
  */

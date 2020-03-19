@@ -106,7 +106,7 @@ public class InputValidation {
 			String passwordRegex = "[!@#\\$%\\^&\\*\\-_.]";
 			for(int i = 0; i < s.length(); i++){
 				if(!Character.isLetterOrDigit(s.charAt(i)) && !passwordRegex.contains(String.valueOf(s.charAt(i)))){
-						incorrectLabel.setText(parameter + " Can Only Contain Letters, Digits, !, @, #, $, %, ^, &, *, -, or _");
+						incorrectLabel.setText(parameter + " Can Only Contain Letters, Digits, !, @, #, $, %, ^, &, *, ., -, or _");
 						incorrectLabel.setOpacity(1);
 						return true;
 				}

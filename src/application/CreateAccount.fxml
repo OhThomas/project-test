@@ -60,7 +60,7 @@
       </HBox>
       <HBox alignment="CENTER" layoutX="10.0" layoutY="190.0" prefHeight="50.0" prefWidth="300.0" spacing="10.0">
          <children>
-            <Button mnemonicParsing="false" onAction="#processCreateAccount" prefWidth="110.0" text="Create Account">
+            <Button fx:id="createAccountButton" mnemonicParsing="false" onAction="#processCreateAccount" prefWidth="110.0" text="Create Account">
                <font>
                   <Font size="12.0" />
                </font>

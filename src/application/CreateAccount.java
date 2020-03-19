@@ -4,11 +4,14 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 /**
  * Controller for the CreateAccount.fxml file.
@@ -30,6 +33,8 @@ public class CreateAccount implements Initializable{
 	TextField firstNameTextField = new TextField();
 	@FXML
 	TextField lastNameTextField = new TextField();
+	@FXML
+	Button createAccountButton = new Button();
 	
 	/**
 	 * Processes username input everytime they release a key.
@@ -82,12 +87,11 @@ public class CreateAccount implements Initializable{
 	}
 
 	/**
-	 * Creates an account whenever they press the text.
+	 * Creates an account whenever they press the text or press enter (determined by other methods/handlers).
 	 * 
 	 * @param event		Text clicked
 	 */
-	@FXML
-	public void processCreateAccount(ActionEvent event){
+	public void processCreateAccount(){
 		if(usernameTextField.getText().isEmpty()){
 			incorrectLabel.setText("Blank Username");
 			incorrectLabel.setOpacity(1);
@@ -175,6 +179,17 @@ public class CreateAccount implements Initializable{
 		}
 	}
 
+
+	/**
+	 * Creates an account whenever they press the text.
+	 * 
+	 * @param event		Text clicked
+	 */
+	@FXML
+	public void processCreateAccount(ActionEvent event){
+		processCreateAccount();
+	}
+	
 	/**
 	 * Goes back to the Login.fxml screen.
 	 */
@@ -188,6 +203,53 @@ public class CreateAccount implements Initializable{
 	 */
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
-		
+		usernameTextField.setOnKeyPressed(new EventHandler<KeyEvent>(){
+			@Override
+			public void handle(KeyEvent keyEvent) {
+				if(keyEvent.getCode() == KeyCode.ENTER){
+					processCreateAccount();
+				}
+			}
+		});
+		passwordTextField.setOnKeyPressed(new EventHandler<KeyEvent>(){
+			@Override
+			public void handle(KeyEvent keyEvent) {
+				if(keyEvent.getCode() == KeyCode.ENTER){
+					processCreateAccount();
+				}
+			}
+		});
+		emailTextField.setOnKeyPressed(new EventHandler<KeyEvent>(){
+			@Override
+			public void handle(KeyEvent keyEvent) {
+				if(keyEvent.getCode() == KeyCode.ENTER){
+					processCreateAccount();
+				}
+			}
+		});
+		firstNameTextField.setOnKeyPressed(new EventHandler<KeyEvent>(){
+			@Override
+			public void handle(KeyEvent keyEvent) {
+				if(keyEvent.getCode() == KeyCode.ENTER){
+					processCreateAccount();
+				}
+			}
+		});
+		lastNameTextField.setOnKeyPressed(new EventHandler<KeyEvent>(){
+			@Override
+			public void handle(KeyEvent keyEvent) {
+				if(keyEvent.getCode() == KeyCode.ENTER){
+					processCreateAccount();
+				}
+			}
+		});
+		createAccountButton.setOnKeyPressed(new EventHandler<KeyEvent>(){
+			@Override
+			public void handle(KeyEvent keyEvent) {
+				if(keyEvent.getCode() == KeyCode.ENTER){
+					processCreateAccount();
+				}
+			}
+		});
 	}
 }

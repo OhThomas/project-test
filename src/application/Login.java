@@ -52,23 +52,7 @@ public class Login implements Initializable{
 	 */
 	@FXML
 	public void processLogin(ActionEvent event){
-		if(isAccount()){
-			System.out.println("HERE");
-//			Main.userAccount.changeScene("UserAccount.fxml");
-			
-//			Main.primaryStage.setScene(Main.userScene);
-//			Main.userAccount.nameLabel.setText(usernameTextField.getText());
-//			System.out.println(Main.userAccount.nameLabel.getText());
-//			controller.changeScene2(event, "UserAccount.fxml");
-			Main.controller.changeScene("UserAccount.fxml");
-			incorrectLabel.setOpacity(0);
-			//change main fxml to account
-		}
-		else{
-			incorrectLabel.setOpacity(1);
-			//print incorrect username/password
-		}
-		System.out.println(passwordTextField.getText());
+		processLogin();
 	}
 	
 	/**

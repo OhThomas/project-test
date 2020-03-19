@@ -15,14 +15,24 @@ public class UserAccount  implements Initializable{
 
 	@FXML
 	Label nameLabel;
-	public static String name = "";
+	public static String userName = "";
+	
+	/**
+	 * Method to test checking/savings on database.
+	 */
+	@FXML
+	private void databaseTest(){
+		Main.database.updateInfo(userName, 5, "100.00");
+		System.out.println(Main.database.accountHistory(userName, "CHECKINGS"));
+		//nameLabel.setText("G");
+	}
 	
 	/**
 	 * Method to react to the user clicking the nameLabel at the top of the account.
 	 */
 	@FXML
 	private void changeName(){
-		System.out.println(name);
+		System.out.println(userName);
 		//nameLabel.setText("G");
 	}
 	
@@ -31,7 +41,7 @@ public class UserAccount  implements Initializable{
 	 */
 	@FXML
 	private void logout(){
-		name = "";
+		userName = "";
 		//Reset variables
 		Main.controller.changeScene("Login.fxml");
 	}
@@ -41,7 +51,7 @@ public class UserAccount  implements Initializable{
 	 */
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
-		nameLabel.setText(name);
+		nameLabel.setText(userName);
 		
 	}
 	
@@ -67,8 +77,8 @@ public class UserAccount  implements Initializable{
 	 * 
 	 * @return	name
 	 */
-	public String getName() {
-		return name;
+	public String getUserName() {
+		return userName;
 	}
 	
 	/**
@@ -76,7 +86,7 @@ public class UserAccount  implements Initializable{
 	 * 
 	 * @param name
 	 */
-	public void setName(String name) {
-		UserAccount.name = name;
+	public void setUserName(String userName) {
+		UserAccount.userName = userName;
 	}
 }

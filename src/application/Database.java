@@ -7,6 +7,8 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.sql.Timestamp;
+import java.util.Date;
 import java.util.Scanner;
 /**
  * Goes through the database.properties file to read/write data. (create server to store this information to 1 database instead of locally)
@@ -212,10 +214,15 @@ public class Database {
 				if(decryptedLine.equals(historyType.toUpperCase().trim()+ "HISTORY, ")){
 					fileWriter.write(EncryptionAES.encrypt(historyType.toUpperCase().trim()+"HISTORY, "));
 					fileWriter.newLine();
-					if(Double.valueOf(oldValue) < Double.valueOf(newValue))
-						fileWriter.write(EncryptionAES.encrypt("$"+oldValue+ "+$"+String.valueOf(Math.abs(Double.valueOf(oldValue)-Double.valueOf(newValue)))+"=$"+newValue));
-					else
-						fileWriter.write(EncryptionAES.encrypt("$"+oldValue+ "-$"+String.valueOf(Math.abs(Double.valueOf(oldValue)-Double.valueOf(newValue)))+"=$"+newValue));
+					Date date = new Date();
+					if(Double.valueOf(oldValue) < Double.valueOf(newValue)){
+						String output = "$"+oldValue+ "+$"+String.valueOf(Math.abs(Double.valueOf(oldValue)-Double.valueOf(newValue)))+"=$"+newValue;
+						fileWriter.write(EncryptionAES.encrypt(String.format("%-44s %s", output,new Timestamp(date.getTime()))));
+					}
+					else{
+						String output = "$"+oldValue+ "-$"+String.valueOf(Math.abs(Double.valueOf(oldValue)-Double.valueOf(newValue)))+"=$"+newValue;
+						fileWriter.write(EncryptionAES.encrypt(String.format("%-44s %s", output,new Timestamp(date.getTime()))));
+					}
 					fileWriter.newLine();
 					while(input.hasNextLine()){
 						line = input.nextLine();

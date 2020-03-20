@@ -24,7 +24,6 @@ public class UserAccount  implements Initializable{
 	private void databaseTest(){
 		Main.database.updateInfo(userName, 5, "100.00");
 		System.out.println(Main.database.accountHistory(userName, "CHECKINGS"));
-		//nameLabel.setText("G");
 	}
 	
 	/**

@@ -40,7 +40,13 @@ public class Controller {
 			e.printStackTrace();
 		}
 	}
-	
+	/**
+	 * Method for main menu button
+	 */
+	@FXML
+	private void main_menu(){
+		Main.controller.changeScene("UserAccount.fxml");
+	}
 	/**
 	 * Changes the scene and changes the window size accordingly. (method above does not change window size)
 	 * 

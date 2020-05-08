@@ -10,11 +10,12 @@
    <children>
       <StackPane prefHeight="50.0" prefWidth="300.0">
          <children>
-            <Label fx:id="result" prefHeight="14.0" prefWidth="384.0">
+            <Label fx:id="result" prefHeight="25.0" prefWidth="186.0" textAlignment="RIGHT">
                <font>
                   <Font size="20.0" />
                </font>
             </Label>
+            <Button mnemonicParsing="false" onAction="#main_menu" text="Main Menu" StackPane.alignment="CENTER_LEFT" />
          </children></StackPane>
       <HBox alignment="CENTER" prefHeight="50.0" prefWidth="300.0" spacing="10.0">
          <children>

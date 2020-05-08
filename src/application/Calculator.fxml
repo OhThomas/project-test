@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
@@ -10,12 +11,11 @@
    <children>
       <StackPane prefHeight="50.0" prefWidth="300.0">
          <children>
-            <Label fx:id="result" prefHeight="25.0" prefWidth="186.0" textAlignment="RIGHT">
+            <Label fx:id="result" prefHeight="30.0" prefWidth="228.0" textAlignment="RIGHT">
                <font>
                   <Font size="20.0" />
                </font>
             </Label>
-            <Button mnemonicParsing="false" onAction="#main_menu" text="Main Menu" StackPane.alignment="CENTER_LEFT" />
          </children></StackPane>
       <HBox alignment="CENTER" prefHeight="50.0" prefWidth="300.0" spacing="10.0">
          <children>
@@ -105,6 +105,15 @@
                <font>
                   <Font size="18.0" />
                </font>
+            </Button>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Button alignment="CENTER" mnemonicParsing="false" onAction="#main_menu" text="Main Menu">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
             </Button>
          </children>
       </HBox>

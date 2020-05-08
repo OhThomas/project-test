@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Log">
+   <children>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="100.0" prefWidth="388.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="15.0">
+                     <children>
+                        <Button alignment="CENTER" mnemonicParsing="false" onAction="#menuButton" text="Main Menu" />
+                        <Button mnemonicParsing="false" onAction="#transHistory" text="Transaction History" />
+                     </children>
+                  </HBox>
+                  <Label alignment="CENTER" text="Log">
+                     <font>
+                        <Font size="23.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="100.0" prefWidth="208.0">
+               <children>
+                  <Label fx:id="balLabel" />
+                  <Label fx:id="balance" />
+                  <TextField fx:id="userInputBalance" onKeyReleased="#userInput" />
+                  <HBox alignment="CENTER" prefHeight="29.0" prefWidth="100.0" spacing="15.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#withdrawl" text="Withdrawl" />
+                        <Button mnemonicParsing="false" onAction="#deposit" text="Deposit" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="15.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#checkingBalance" text="Checking" />
+            <Button mnemonicParsing="false" onAction="#savingsBalance" text="Savings" />
+         </children></HBox>
+   </children>
+</VBox>

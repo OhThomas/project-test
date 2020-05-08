@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="337.0" prefWidth="386.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.TransactionHist">
+   <children>
+      <VBox alignment="CENTER" prefHeight="337.0" prefWidth="386.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="100.0" prefWidth="223.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="15.0">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#mainMenu" text="Main Menu" />
+                              <Button mnemonicParsing="false" onAction="#back" text="Back" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="15.0">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#check" text="Checking" />
+                              <Button mnemonicParsing="false" onAction="#savings" text="Savings" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="235.0" prefWidth="386.0">
+               <children>
+                  <TextArea fx:id="History" prefHeight="100.0" prefWidth="384.0" promptText="Please select checking or savings" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

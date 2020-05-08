@@ -35,6 +35,14 @@ public class UserAccount  implements Initializable{
 		//nameLabel.setText("G");
 	}
 	
+	/*
+	 * Method to change scene to calculator
+	 */
+	@FXML
+	private void calcButton(){
+		Main.controller.changeScene("Calculator.fxml");
+	}
+	
 	/**
 	 * Method to logout the user and return to the Login.fxml
 	 */

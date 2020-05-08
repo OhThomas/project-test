@@ -43,6 +43,14 @@ public class UserAccount  implements Initializable{
 		Main.controller.changeScene("Calculator.fxml");
 	}
 	
+	/*
+	 * Method to change scene to log
+	 */
+	@FXML
+	private void logButton(){
+		Main.controller.changeScene("Log.fxml");
+	}
+	
 	/**
 	 * Method to logout the user and return to the Login.fxml
 	 */

@@ -47,6 +47,7 @@ public class EncryptionAES {
      * @return					Returns an AES encrypted string
      */
     public static String encrypt(String strToEncrypt) {
+    	//return strToEncrypt;/*
         try {
             setKey(keyString);
             Cipher cipher = Cipher.getInstance("AES/ECB/PKCS5Padding");
@@ -56,7 +57,7 @@ public class EncryptionAES {
         catch (Exception e) {
             System.out.println("Error while encrypting: " + e.toString());
         }
-        return null;
+        return null;//*/
     }
     
     /**
@@ -66,6 +67,7 @@ public class EncryptionAES {
      * @return					Returns a String in UTF-8 format
      */
     public static String decrypt(String strToDecrypt) {
+    	//return strToDecrypt;/*
         try {
             setKey(keyString);
             Cipher cipher = Cipher.getInstance("AES/ECB/PKCS5PADDING");
@@ -75,6 +77,6 @@ public class EncryptionAES {
         catch (Exception e) {
             System.out.println("Error while decrypting: " + e.toString());
         }
-        return null;
+        return null;//*/
     }
 }

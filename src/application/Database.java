@@ -206,11 +206,13 @@ public class Database {
 			historyType = "SAVINGS";
 		else if(!(historyType.toUpperCase().trim().equals("CHECKINGS") || historyType.toUpperCase().trim().equals("SAVINGS")))
 			return;
-		String line = input.nextLine();
+		String line = "";
 		String decryptedLine = "";
 		try {
 			while(input.hasNextLine()){
+				line = input.nextLine();
 				decryptedLine = EncryptionAES.decrypt(line);
+				//System.out.println("FAKEhere = "+decryptedLine + " actual = "+historyType);
 				if(decryptedLine.equals(historyType.toUpperCase().trim()+ "HISTORY, ")){
 					fileWriter.write(EncryptionAES.encrypt(historyType.toUpperCase().trim()+"HISTORY, "));
 					fileWriter.newLine();
@@ -224,12 +226,12 @@ public class Database {
 						fileWriter.write(EncryptionAES.encrypt(String.format("%-44s %s", output,new Timestamp(date.getTime()))));
 					}
 					fileWriter.newLine();
-					while(input.hasNextLine()){
-						line = input.nextLine();
-						fileWriter.write(line);
-						fileWriter.newLine();
-					}
-					return;
+					//while(input.hasNextLine()){
+						//line = input.nextLine();
+						//fileWriter.write(line);
+						//fileWriter.newLine();
+					//}
+					//return;
 				}
 				else if(line.equals("USERNAME, ")){
 					//end
@@ -241,7 +243,7 @@ public class Database {
 					fileWriter.write(line);
 					fileWriter.newLine();
 				}
-				line = input.nextLine();
+				//System.out.println("line = "+line);
 			}
 		} catch (IOException e) {
 			e.printStackTrace();

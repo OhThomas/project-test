@@ -1,4 +1,11 @@
 We have included a runnable jar file on github
+and a runnable exe file
+link to github:
+https://github.com/OhThomas/project-test.git
+You will need to click on download -> Download ZIP
+once you have the zip, extract all files to a new folder
+after that, you may click on the bank.exe or bank.jar to run the application
+
 This program will allow users to create a password protected profile. Once created, you may log into the app.
 Account Creation required fields:
 -username alias - only letters, digits, '-', or '_'
